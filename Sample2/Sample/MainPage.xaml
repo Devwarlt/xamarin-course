@@ -16,6 +16,6 @@
         <Entry Placeholder="insert your name" Grid.Column="1"/>
         <Label Text="Age" Grid.Row="1"/>
         <Entry Placeholder="insert your age" Grid.Row="1" Grid.Column="1"/>
-        <Button Text="Age" Grid.Row="2" Grid.Column="1"/>
+        <Button Text="Show" Grid.Row="2" Grid.Column="1"/>
     </Grid>
 </ContentPage>
