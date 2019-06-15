@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="https://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack" 
     xmlns:local="clr-namspace:Sample" x:Class="Sample.MainPage">
     <Grid>
         <Grid.RowDefinitions>
+            <!-- <Grid.RowDefinition Height="2.5*"/>
             <Grid.RowDefinition Height="2.5*"/>
             <Grid.RowDefinition Height="2.5*"/>
-            <Grid.RowDefinition Height="2.5*"/>
+            <Grid.RowDefinition Height="auto"/> -->
+            <Grid.RowDefinition Height="auto"/>
             <Grid.RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <Grid.ColumnDefinition Width="5*"/>
+            <!-- <Grid.ColumnDefinition Width="5*"/>
+            <Grid.ColumnDefinition Width="auto"/> -->
             <Grid.ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <Label Text="Name"/>
+        <!-- <Label Text="Name"/>
         <Entry Placeholder="insert your name" x:Name="entryName" Grid.Column="1"/>
         <Label Text="Age" Grid.Row="1"/>
         <Entry Placeholder="insert your age" Keyboard="Numeric" x:Name="entryAge" Grid.Row="1" Grid.Column="1"/>
@@ -22,6 +26,19 @@
             <Label.GestureRecognizers>
                 <TabGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
             </Label.GestureRecognizers>
-        </Label>
+        </Label> -->
+        <Label Text="Age" FonSize="Medium"/>
+        <Entry Placeholder="Age" FontSize="Medium">
+            <Entry.Behaviors>
+                <behaviorPack:MaxLengthValidationBehavior MaxLength="3"/>
+                <behaviorPack:NumberValidationBehavior/>
+            </Entry.Behavior>
+        </Entry>
+        <Entry Placeholder="CPF" Grid.Row="1" Keyboard="Numeric" MaxLength="20">
+            <Entry.Behaviors>
+                <behaviorPack:CPFValidationBehavior/>
+                <behaviorPack:MaskedBehavior Mask="XXX.XXX.XXX-XX"/>
+            </Entry.Behaviors>
+        </Entry>
     </Grid>
 </ContentPage>

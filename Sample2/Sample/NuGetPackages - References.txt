@@ -1,3 +1,9 @@
 [ACR User Dialogs]: // https://github.com/aritchie/userdialog
 NuGet > ACR User Dialogs
     add dependencies to all projects
+
+[HotReload]: // https://github.com/AndreiMisiukevich/HotReload
+NuGet > HotReload
+
+[BehaviorValidationPack]: //https://github.com/TBertuzzi/Xamarin.Forms.BehaviorValidationPack
+NuGet > Xamarin.Forms.BehaviorValidationPack
