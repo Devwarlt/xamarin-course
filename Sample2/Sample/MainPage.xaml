@@ -4,8 +4,9 @@
     xmlns:local="clr-namspace:Sample" x:Class="Sample.MainPage">
     <Grid>
         <Grid.RowDefinitions>
-            <Grid.RowDefinition Height="3.3*"/>
-            <Grid.RowDefinition Height="3.3*"/>
+            <Grid.RowDefinition Height="2.5*"/>
+            <Grid.RowDefinition Height="2.5*"/>
+            <Grid.RowDefinition Height="2.5*"/>
             <Grid.RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -13,9 +14,14 @@
             <Grid.ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Label Text="Name"/>
-        <Entry Placeholder="insert your name" Grid.Column="1"/>
+        <Entry Placeholder="insert your name" x:Name="entryName" Grid.Column="1"/>
         <Label Text="Age" Grid.Row="1"/>
-        <Entry Placeholder="insert your age" Grid.Row="1" Grid.Column="1"/>
-        <Button Text="Show" Grid.Row="2" Grid.Column="1"/>
+        <Entry Placeholder="insert your age" Keyboard="Numeric" x:Name="entryAge" Grid.Row="1" Grid.Column="1"/>
+        <Button Text="Show" x:Name="btnShow" Clicked="changeEntryNameTextOnClick" Grid.Row="2" Grid.Column="1"/>
+        <Label Text="Click here" VerticalOptions="Center" Grid.Row="3">
+            <Label.GestureRecognizers>
+                <TabGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+            </Label.GestureRecognizers>
+        </Label>
     </Grid>
 </ContentPage>
