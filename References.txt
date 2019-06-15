@@ -1,0 +1,22 @@
+Web
+    MVC (Model View Controller)
+Desktop
+    MVP (Model View Presentation)
+Mobile
+    MVVM (Model View Viewmodel)
+
+Wi-Fi: ProjEvento@19
+
+References:
+[1]. "Gitflow", available at https://datasift.github.io/gitflow/IntroducingGitFlow.html
+[2]. "Genymotion", available at https://www.genymotion.com/
+[3]. "How to show or change your Git username or email address", available at https://alvinalexander.com/git/git-show-change-username-email-address
+[4]. "HotReload Xamarin", available at https://github.com/AndreiMisiukevich/HotReload
+[5]. "NativeScript", available at http://nsimage.brosteins.com/
+[6]. "BehaviorValidationPack", available at https://github.com/TBertuzzi/Xamarin.Forms.BehaviorValidationPack
+[7]. "AppVeyor CI", available at https://medium.com/@thiagoloureiro/appveyor-fazendo-integra%C3%A7%C3%A3o-cont%C3%ADnua-ci-nos-seus-projetos-do-github-5d1707109c21
+[8]. "ObservableCollection", available at https://docs.microsoft.com/pt-br/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8
+
+Performance:
+- Unitary tests for each method
+- Xamarin Enterprise Profile

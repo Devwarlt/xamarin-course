@@ -1,0 +1,9 @@
+..
+
+<NavigationPage Title="Me">
+    <x:Arguments>
+        <views:MainPage />
+    </x:Arguments>
+</NavigationPage>
+
+..
