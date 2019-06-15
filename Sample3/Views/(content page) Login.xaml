@@ -9,13 +9,13 @@
                 <Grid.RowDefinition Height="auto" />
                 <Grid.RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Entry Placeholder="Email" PlaceholderColor="DarkGray" MaxLength="20" />
-            <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="DarkGray" MaxLength="10" Grid.Row="1" />
+            <Entry Text="{Binding Email}" Placeholder="Email" PlaceholderColor="DarkGray" MaxLength="50" />
+            <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" PlaceholderColor="DarkGray" MaxLength="10" Grid.Row="1" />
             <FlexLayout Direction="Row" WidthRequest="100" Grid.Row="2">
                 <Switch OnColor="Red" />
                 <Label Text="Save password" />
             </FlexLayout>
-            <Button Text="Login" TextColor="White" FontSize="Medium" BackgroundColor="Red" Grid.Row="3" />
+            <Button Command="{Binding LoginCmd}" Text="Login" TextColor="White" FontSize="Medium" BackgroundColor="Red" Grid.Row="3" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
