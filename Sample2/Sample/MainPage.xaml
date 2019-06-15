@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="https://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namspace:Sample" x:Class="Sample.MainPage">
+    <!--
+        Orientations (alignment vertical / horizontal): highly recommended to use grid orientation for relative positions.
+
+        HorizontalOptions / VerticalOptions:
+            - Start
+            - Center
+            - Top
+        
+        Margin (left, top, right, bottom):
+            - OnPlatform (Android / iOS)
+            - Sample:
+                Margin = "{OnPlatform Android=100,iOS=20}"
+    -->
+    <!--<StackLayout Orientation="Horizontal">
+        <Label Text="Welcome!" TextColor="red" FontSize="14" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+    </StackLayout>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- row 0 allocate 20% of screen size -->
+            <RowDefinition Height="2*" />
+            <!-- row 1 allocate 70% of screen size  -->
+            <RowDefinition Height="7*" />
+            <!-- row 2 allocate the rest of screen size -->
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <!-- column 0 -->
+            <ColumnDefinition Width="auto" />
+            <!-- column 0 -->
+            <ColumnDefinition Width="auto" />
+            <!-- column 0 -->
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <!-- Labels -->
+        <Label Text="Close" Grid.Column="2"/>
+        <Label Text="X" FontSize="30" Grid.Column="2"/>
+        <!-- Entry (textbox HTML like) -->
+        <Entry Placeholder="This is a textbox, must type something here." PlaceholderColor="Red"/>
+        <!-- Button -->
+        <Button Text="Ok" BackgroundColor="Green" Grid.Row="2" Grid.Column="1"/>
+    </Grid>
+</ContentPage>
