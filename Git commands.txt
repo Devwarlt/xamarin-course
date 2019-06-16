@@ -21,3 +21,6 @@ Checkout status:
     git status -s
 Get all used commands (since begining of prompt session):
     history
+Unset Git credentials
+    git config --global --unset credential.helper
+    git config --system --unser credential.helper
