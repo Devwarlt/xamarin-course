@@ -26,3 +26,4 @@ Unset Git credentials
     git config --system --unser credential.helper
 Disable SSL certificate
     git config http.sslVerify false
+    git -c http.sslVerify=false clone <repo url>
